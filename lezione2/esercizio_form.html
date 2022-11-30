@@ -5,115 +5,149 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
+
     <style>
-        div {
-            padding: 10px;
-            border: dotted 1px #9b9b9b;
-            display: inline-block;
-            width: auto;
-        }
+      * {
+        font-family: Tahoma, sans-serif;
+      }
+      #logo {
+        width: 30%;
+        float: right;
+        margin-right: 2rem;
+      }
+      h2 {
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 3rem;
+      }
+      label{
+        display:block;
+      }
 
-        h3 {
-            padding-top: 0;
-            margin-top: 0;
-        }
+      .noaccapo>label {
+        display: inline;
+      }
 
-        td, th {
-            border-right: #000000 solid 1px;
-            border-top: #000000 solid 1px;
-            text-align: left;
-            padding: 5px;
-        }
-
-        table {
-            border-spacing: 0;
-            width: 800px;
-            border-left: #000000 solid 1px;
-            border-bottom: #000000 solid 1px;
-        }
-
-        td.desc {
-            font-size: 12px;
-        }
     </style>
+
   </head>
   <body>
-    <img src="" alt="pennelli"/>
-
     <h2>Benvenuto nel forum degli Illustratori!</h2>
 
-    
+    <img src="assets/pennelli.jpg" alt="pennelli" id="logo"/>
 
-    <form action="" method="get" class="form-example">
+    <form action="result.html" method="get" class="form-example">
       <div class="form-example">
-        <label for="name">Nome: </label>
-        <input type="text" name="name" id="name" required />
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" id="nome" required />
       </div>
-      <br />
+
       <div class="form-example">
         <label for="cognome">Cognome: </label>
-        <input type="text" name="cognome" id="name" required />
+        <input type="text" name="cognome" id="nome" required />
       </div>
-      <br />
+
+      <div class="form-example">
       <label for="start">Data di nascita:</label>
-       <input
-        type="date" id="start" name="trip-start"
-        value="2022-07-30"
-        min="1999-01-01"
-        max="2023-12-31"
-        required/>
-      <br>
+      <input
+        type="date"
+        id="start"
+        name="trip-start"
+        value="2022-11-30"
+        min="1930-01-01"
+        max="2022-12-31"
+        required
+      />
+      </div>
 
       <div class="form-example">
         <label for="luogo">Luogo di nascita: </label>
         <input type="text" name="luogo" id="name" required />
-        <br>
+      </div>
+      <hr />
 
       <div class="form-example">
         <label for="email">email: </label>
         <input type="email" name="email" id="email" required />
       </div>
-      <br>
-
-      <div>
-        <label for="pass">Password (minimo 8 caratteri):</label>
-        <input type="password" id="pass" name="password"
-               minlength="8" required>
-    </div>
-<br>
-<div>
-    <label for="pass">Conferma password :</label>
-    <input type="password" id="pass" name="password"
-           minlength="8" required>
-</div>
-<br>
-<label for="raccontadite">Racconta di te:</label>
-
-<textarea id="raccontadite" name="raccontadite"
-          rows="5" cols="33">
-</textarea>
-      <br>
-             <fieldset>
-                <legend>Le tue illustrazioni:</legend>
-            
-                <div>
-                  <input type="checkbox" id="vettoriali" name="vettoriali" checked>
-                  <label for="vettoriali">vettoriali</label>
-                </div>
-            
-                <div>
-                  <input type="checkbox" id="bitmap" name="bitmap">
-                  <label for="bitmap">bitmap</label>
-                </div>
-            </fieldset>
-            <br>
-
-
 
       <div class="form-example">
-        <input type="iscriviti" value="Iscriviti!" />
+        <label for="pass">Password <span style="color: grey; font-size: smaller;">(minimo 8 caratteri)</span>:</label>
+        <input
+          type="password"
+          id="pass"
+          name="password"
+          minlength="8"
+          required
+        />
       </div>
 
+      <div class="form-example">
+        <label for="pass">Conferma password :</label>
+        <input
+          type="password"
+          id="pass"
+          name="password"
+          minlength="8"
+          required
+        />
+      </div>
+      <hr />
+
+      <div class="form-example">
+      <label for="raccontadite">Racconta di te:</label>
+
+      <textarea
+        id="raccontadite"
+        name="raccontadite"
+        rows="5"
+        cols="33"
+      ></textarea>
+    </div>
+
+      <fieldset class="noaccapo">
+        <legend>Le tue illustrazioni:</legend>
+
+        
+          <input type="checkbox" id="vettoriali" name="illustrazioni" checked />
+          <label for="vettoriali">vettoriali</label>
+
+          <input type="checkbox" id="bitmap" name="illustrazioni" />
+          <label for="bitmap">bitmap</label>
+     
+       
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>Privacy:</legend>
+        <p>
+          Procedendo, accetto i Termini e le Condizioni e riconosco di essere
+          stato informato che i miei dati personali saranno utilizzati come
+          descritto di seguito e a seconda della Politica di privacy della
+          gestione dei dati personali.
+        </p>
+        <div class="noaccapo">
+          <input
+            type="radio"
+            id="accetto"
+            name="privacy"
+            value="accetto"
+            required
+          />
+          <label for="accetto">accetto</label>
+       
+          <input
+            type="radio"
+            id="nonaccetto"
+            name="privacy"
+            value="nonaccetto"
+          />
+          <label for="nonaccetto">non accetto</label>
+        </div>
+      </fieldset>
+
+      <div class="form-example">
+        <input type="submit" value="Iscriviti" />
+      </div>
     </form>
   </body>
 </html>
