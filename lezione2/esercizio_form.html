@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+        div {
+            padding: 10px;
+            border: dotted 1px #9b9b9b;
+            display: inline-block;
+            width: auto;
+        }
+
+        h3 {
+            padding-top: 0;
+            margin-top: 0;
+        }
+
+        td, th {
+            border-right: #000000 solid 1px;
+            border-top: #000000 solid 1px;
+            text-align: left;
+            padding: 5px;
+        }
+
+        table {
+            border-spacing: 0;
+            width: 800px;
+            border-left: #000000 solid 1px;
+            border-bottom: #000000 solid 1px;
+        }
+
+        td.desc {
+            font-size: 12px;
+        }
+    </style>
+  </head>
+  <body>
+    <img src="" alt="pennelli"/>
+
+    <h2>Benvenuto nel forum degli Illustratori!</h2>
+
+    
+
+    <form action="" method="get" class="form-example">
+      <div class="form-example">
+        <label for="name">Nome: </label>
+        <input type="text" name="name" id="name" required />
+      </div>
+      <br />
+      <div class="form-example">
+        <label for="cognome">Cognome: </label>
+        <input type="text" name="cognome" id="name" required />
+      </div>
+      <br />
+      <label for="start">Data di nascita:</label>
+       <input
+        type="date" id="start" name="trip-start"
+        value="2022-07-30"
+        min="1999-01-01"
+        max="2023-12-31"
+        required/>
+      <br>
+
+      <div class="form-example">
+        <label for="luogo">Luogo di nascita: </label>
+        <input type="text" name="luogo" id="name" required />
+        <br>
+
+      <div class="form-example">
+        <label for="email">email: </label>
+        <input type="email" name="email" id="email" required />
+      </div>
+      <br>
+
+      <div>
+        <label for="pass">Password (minimo 8 caratteri):</label>
+        <input type="password" id="pass" name="password"
+               minlength="8" required>
+    </div>
+<br>
+<div>
+    <label for="pass">Conferma password :</label>
+    <input type="password" id="pass" name="password"
+           minlength="8" required>
+</div>
+<br>
+<label for="raccontadite">Racconta di te:</label>
+
+<textarea id="raccontadite" name="raccontadite"
+          rows="5" cols="33">
+</textarea>
+      <br>
+             <fieldset>
+                <legend>Le tue illustrazioni:</legend>
+            
+                <div>
+                  <input type="checkbox" id="vettoriali" name="vettoriali" checked>
+                  <label for="vettoriali">vettoriali</label>
+                </div>
+            
+                <div>
+                  <input type="checkbox" id="bitmap" name="bitmap">
+                  <label for="bitmap">bitmap</label>
+                </div>
+            </fieldset>
+            <br>
+
+
+
+      <div class="form-example">
+        <input type="iscriviti" value="Iscriviti!" />
+      </div>
+
+    </form>
+  </body>
+</html>
