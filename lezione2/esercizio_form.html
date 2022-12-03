@@ -6,133 +6,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
 
-    <link rel="stylesheet" href="styleform.css">
-
+    <link rel="stylesheet" href="styleform.css" />
   </head>
   <body>
     <main>
-    <header><h2>Benvenuto nel forum degli Illustratori!</h2>
-    <h4>Iscriviti al forum!</h4>
-    
-
-  </header>
-
-    <img src="assets/pennelli.jpg" alt="pennelli" id="logo"/>
-
-    <form action="result.html" method="get" class="form-example">
-      <div class="form-example">
-        <label for="nome">Nome: </label>
-        <input type="text" name="nome" id="nome" required />
-      </div>
-
-      <div class="form-example">
-        <label for="cognome">Cognome: </label>
-        <input type="text" name="cognome" id="nome" required />
-      </div>
-
-      <div class="form-example">
-      <label for="start">Data di nascita:</label>
-      <input
-        type="date"
-        id="start"
-        name="trip-start"
-        value=""
-        min="1930-01-01"
-        max="2022-12-31"
-        required
-      />
-      </div>
-
-      <div class="form-example">
-        <label for="luogo">Luogo di nascita: </label>
-        <input type="text" name="luogo" id="name" required />
-      </div>
-      
-
-      <div class="form-example">
-        <label for="email">email: </label>
-        <input type="email" name="email" id="email" required />
-      </div>
-
-      <div class="form-example">
-        <label for="pass">Password <span style="color: grey; font-size: smaller;">(minimo 8 caratteri)</span>:</label>
-        <input
-          type="password"
-          id="pass"
-          name="password"
-          minlength="8"
-          required
-        />
-      </div>
-
-      <div class="form-example">
-        <label for="pass">Conferma password :</label>
-        <input
-          type="password"
-          id="pass"
-          name="password"
-          minlength="8"
-          required
-        />
-      </div>
-      
-
-      <div class="racconta">
-      <label for="raccontadite">Racconta di te:</label>
-
-      <textarea
-        id="raccontadite"
-        name="raccontadite"
-        rows="5"
-        cols="33"
-      ></textarea>
-    </div>
-
-      <fieldset class="noaccapo">
-        <legend>Le tue illustrazioni sono:</legend>
-
-        
-          <input type="checkbox" id="vettoriali" name="illustrazioni" checked />
-          <label for="vettoriali">vettoriali</label>
-
-          <input type="checkbox" id="bitmap" name="illustrazioni" />
-          <label for="bitmap">bitmap</label>
+      <header>
+        <h2>Benvenuto nel forum degli Illustratori!</h2>
+        <h4>Iscriviti al forum!</h4>
+      </header>
      
-       
-      </fieldset>
-      <br />
-      <fieldset>
-        <legend>Privacy:</legend>
-        <p>
-          Procedendo, accetto i Termini e le Condizioni e riconosco di essere
-          stato informato che i miei dati personali saranno utilizzati come
-          descritto di seguito e a seconda della Politica di privacy della
-          gestione dei dati personali.
-        </p>
-        <div class="noaccapo">
-          <input
-            type="radio"
-            id="accetto"
-            name="privacy"
-            value="accetto"
-            required
-          />
-          <label for="accetto">accetto</label>
-       
-          <input
-            type="radio"
-            id="nonaccetto"
-            name="privacy"
-            value="nonaccetto"
-          />
-          <label for="nonaccetto">non accetto</label>
-        </div>
-      </fieldset>
+        <img src="assets/pennelli.jpg" alt="pennelli" id="logo" />
 
-      <div class="form-example">
-        <input type="submit" value="Iscriviti" />
-      </div>
-    </form>
-  </main>
+        <form action="result.html" method="get" class="form-example">
+          <div class="form-example">
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome" id="nome" required />
+          </div>
+
+          <div class="form-example">
+            <label for="cognome">Cognome: </label>
+            <input type="text" name="cognome" id="nome" required />
+          </div>
+
+          <div class="form-example">
+            <label for="start">Data di nascita:</label>
+            <input
+              type="date"
+              id="start"
+              name="trip-start"
+              value=""
+              min="1930-01-01"
+              max="2022-12-31"
+              required
+            />
+          </div>
+
+          <div class="form-example">
+            <label for="luogo">Luogo di nascita: </label>
+            <input type="text" name="luogo" id="name" required />
+          </div>
+
+          <div class="form-example">
+            <label for="email">email: </label>
+            <input type="email" name="email" id="email" required />
+          </div>
+
+          <div class="form-example">
+            <label for="pass"
+              >Password
+              <span style="color: grey; font-size: smaller"
+                >(minimo 8 caratteri)</span
+              >:</label
+            >
+            <input
+              type="password"
+              id="pass"
+              name="password"
+              minlength="8"
+              required
+            />
+          </div>
+
+          <div class="form-example">
+            <label for="pass">Conferma password :</label>
+            <input
+              type="password"
+              id="pass"
+              name="password"
+              minlength="8"
+              required
+            />
+          </div>
+
+          <div class="racconta">
+            <label for="raccontadite">Racconta di te:</label>
+
+            <textarea
+              id="raccontadite"
+              name="raccontadite"
+              rows="5"
+              cols="33"
+            ></textarea>
+          </div>
+
+          <fieldset class="noaccapo">
+            <legend>Le tue illustrazioni sono:</legend>
+
+            <input
+              type="checkbox"
+              id="vettoriali"
+              name="illustrazioni"
+              checked
+            />
+            <label for="vettoriali">vettoriali</label>
+
+            <input type="checkbox" id="bitmap" name="illustrazioni" />
+            <label for="bitmap">bitmap</label>
+          </fieldset>
+          <br />
+          <fieldset>
+            <legend>Privacy:</legend>
+            <p>
+              Procedendo, accetto i Termini e le Condizioni e riconosco di
+              essere stato informato che i miei dati personali saranno
+              utilizzati come descritto di seguito e a seconda della Politica di
+              privacy della gestione dei dati personali.
+            </p>
+            <div class="noaccapo">
+              <input
+                type="radio"
+                id="accetto"
+                name="privacy"
+                value="accetto"
+                required
+              />
+              <label for="accetto">accetto</label>
+
+              <input
+                type="radio"
+                id="nonaccetto"
+                name="privacy"
+                value="nonaccetto"
+              />
+              <label for="nonaccetto">non accetto</label>
+            </div>
+          </fieldset>
+
+          <div class="form-example">
+            <input type="submit" value="Iscriviti" />
+          </div>
+        </form>
+      </article>
+    </main>
   </body>
 </html>
