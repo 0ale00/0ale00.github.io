@@ -1,0 +1,22 @@
+
+.bordo-trattegiato {
+    background-clip: border-box;
+    border: 0.8em rgb(20, 20, 20);
+    margin: 1em 0;
+    padding: 1.4em;
+    border-style: dotted double;
+    background: beige;
+    cursor: pointer;
+  }
+
+  .sfondoimm{
+    font: 900 50px sans-serif;
+    background-image: url(../assets/logo1_Tavola_disegno1.jpg);
+    background-size: 5%;
+    background-repeat: no-repeat;
+  }
+
+.sfondo{
+    background: linear-gradient( white,gray);
+    
+}
