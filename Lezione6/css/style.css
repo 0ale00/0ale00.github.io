@@ -1,3 +1,31 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@0ale00 
+radetzky-dev
+/
+radetzky-dev.github.io
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security
+Insights
+radetzky-dev.github.io/lezione6/css/style.css
+@radetzky-dev
+radetzky-dev modifche
+Latest commit ffe7a03 2 minutes ago
+ History
+ 1 contributor
+40 lines (34 sloc)  751 Bytes
+
 p {
     border: 0.8em darkviolet;
     border-style: dotted double;
@@ -23,4 +51,17 @@ p {
     -webkit-background-clip: text;
     color: rgba(0, 0, 0, 0.2);
   }
+
+  .exampleone {
+    background-color: transparent;
+  }
   
+  .exampletwo {
+    background-color: rgb(153, 102, 153);
+    color: rgb(255, 255, 204);
+  }
+  
+  .examplethree {
+    background-color: #777799;
+    color: #ffffff;
+  }
