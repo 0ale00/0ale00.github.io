@@ -1,6 +1,5 @@
 
 .bordo-trattegiato {
-    background-clip: border-box;
     border: 0.8em rgb(20, 20, 20);
     margin: 1em 0;
     padding: 1.4em;
