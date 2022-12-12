@@ -1,0 +1,46 @@
+/* General tags */
+*{  
+    margin-top: 1em;
+    display: block;
+    color: blue;
+}
+
+ 
+/* button look */
+.submitclass {
+    width: 10em;
+    height: 5ex;
+    background-color: rgb(197, 195, 192);
+    border: 2px solid rgb(5, 5, 5);
+    border-radius: 10px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+   }
+
+/* button action */
+.submitclass:hover {
+    background-color: rgb(243, 243, 40);
+    border-color: rgb(136, 137, 137);
+    box-shadow:10px 5px 5px rgb(42, 41, 41);
+}
+
+
+/*valid compilation*/
+input:valid {
+    border: none;
+    outline: 2px solid rgb(6, 176, 9);
+    border-radius: 5px;
+  }
+
+/*invalid compilation*/
+input:invalid {
+    border: none;
+    outline: 2px solid rgb(176, 6, 6);
+    border-radius: 5px;
+  }
+
+  /*input area color*/
+  input:focus {
+    background-color: rgb(243, 243, 40);
+}

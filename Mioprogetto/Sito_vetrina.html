@@ -17,20 +17,21 @@
     </header>
     <section>
 
-     <form action="result.html" method="get" class="form-example">
+     <form action="result.html" method="get" class="">
 
       <h4>Iscriviti:</h4>
-      <div class=spazio>
-        <label for="nome">Nome*: </label>
-        <input type="text" name="nome" id="nome" required />
+      <div class="">
+        <label for="name">Nome*: </label>
+        <input type="text" name="name" id="name" required="required" />
+        <span></span>
       </div>
 
-      <div class=spazio>
-        <label for="cognome">Cognome*: </label>
-        <input type="text" name="cognome" id="nome" required />
+      <div class="">
+        <label for="lastname">Cognome*: </label>
+        <input type="text" name="lastname" id="lastname" required="required" />
       </div>
 
-      <div class=spazio>
+      <div class="">
        <label for="start">Data di nascita*:</label>
             <input
               type="date"
@@ -38,46 +39,44 @@
               name="trip-start"
               value=""
               min="1930-01-01"
-              max="2022-12-31"
-              required
-            />
+              max="2022-12-31"/>
         </div>
 
-       <div class=spazio>
-        <label for="luogo">Luogo di nascita: </label>
-        <input type="text" name="luogo" id="nome" required />
+       <div class="">
+        <label for="birthplace">Luogo di nascita: </label>
+        <input type="text" name="birthplace" id="birthplace" required="required" />
       </div>
 
-      <div class=spazio>
+      <div class="">
         <label for="email">E-mail*: </label>
-            <input type="email" name="email" id="nome" required />
+            <input type="email" name="email" id="email" required="required" />
       </div>
       
-      <div class=spazio>
+      <div class="">
         <label for="pass">Password*:
               <span style="color: grey; font-size: smaller">(minimo 8 caratteri)</span
               >:</label>
-              <input type="password" id="nome" name="password" minlength="8" required/>
+              <input type="password" id="password" name="password" minlength="8" required="required"/>
       </div>
 
-      <div class=spazio>
+      <div class="">
         <label for="pass">Conferma password*:</label>
-        <input type="password" id="nome" name="password" minlength="8"  required/>
+        <input type="password" id="passwordCfr" name="passwordCfr" minlength="8"  required="required"/>
       </div>
 
-      <div class=spazio>
-        <label for="raccontadite">Racconta di te:</label>
-        <textarea id="racconta" name="raccontadite" rows="5" cols="33" placeholder="scrivi qui"></textarea>
+      <div class="">
+        <label for="tellme">Racconta di te:</label>
+        <textarea id="tellme" name="tellme"  placeholder="scrivi qui"></textarea>
     </div>
     
-    <div class=spazio1>
+    <div class="">
         <i>Accetto i termini, le condizioni e l'informativa sulla privacy.<i>
-            <input type="checkbox" id="privacy" name="privacy" required/>
+            <input type="checkbox" id="privacy" name="privacy" required="required"/>
     </div>
 
-    <div class=spazio>
-        <input type="submit" value="Iscriviti"/>
-    </div>
+    
+          <input class="submitclass" type="submit" id="joinbutton" value="Iscriviti"/>
+    
 
         
      </form>
