@@ -1,0 +1,134 @@
+/* 1 STEP : box sizing and lobotimized owl */
+
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+body * + * {
+  margin-top: 1.5em;
+}
+
+/* 2 STEP : generic styling rules */
+
+body {
+  background: #bbb;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  margin-bottom: 1.5em;
+}
+
+header,
+footer {
+  background-color: #07c180;
+  padding: 1.5em;
+  color: #fff;
+}
+
+main {
+  background: #fff;
+  padding: 0 1.5em 1.5em 1.5em;
+}
+
+header,
+footer,
+main {
+  border-radius: 5px;
+}
+
+article {
+  background-color: rgb(243, 243, 228);
+  padding: 1.5em;
+  border-radius: 30px;
+}
+
+article h4 {
+  margin: 0;
+}
+
+/* 3 STEP : applying float section */
+
+/* double container pattern */
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+article {
+  float: left;
+  width: 50%;
+}
+
+/* 4 STEP : fixing floating section */
+
+section::after {
+  display: block;
+  content: " ";
+  clear: both;
+}
+
+/* 5 STEP : article margins */
+
+article {
+  margin: 0 1.5em 1.5em 0;
+  width: calc(50% - 1.5em);
+}
+
+/*fixes the margins of the edge children*/
+section {
+  margin-right: -1.5em;
+  margin-bottom: -1.5em;
+}
+
+/* 6 STEP : Fixes collapsing margin of section title */
+
+section::before {
+  display: table;
+  content: " ";
+}
+
+/* 7 STEP : grid row clearfix */
+
+.articles > :nth-child(2n + 1) {
+  clear: left;
+}
+
+/* 8 STEP : grid element styling */
+
+.articles img {
+  float: left;
+  margin: 0 1.5em 1.5em 0;
+}
+
+.articles .article-body {
+  overflow: auto;
+}
+
+.images {
+  max-width: 200px;
+  border: none;
+  border-radius: 20px;
+}
+
+.logo {
+  display: block;
+  margin: 0px auto;
+  max-width: 200px;
+  border-radius: 20px;
+}
+
+section h2,
+footer {
+  text-align: center;
+}
+
+a {
+  cursor: pointer;
+}
