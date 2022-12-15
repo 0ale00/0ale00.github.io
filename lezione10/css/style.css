@@ -22,16 +22,12 @@ header {
   margin-bottom: 1.5em;
 }
 
-.hflex {
+/* .hflex {
   display: flex;
   justify-content: space-between;
-}
+} */
 
-.social {
-  display: flex;
-  line-height: 5em;
-  margin-left: 45em;
-}
+
 
 .immagec {
   display: block;
@@ -138,14 +134,36 @@ header {
 footer {
   background-color: var(--black-color);
   color: var(--footer-bk-color);
-}
+  }
 
 .footer-nav {
   display: flex;
+  float:left; /* per far allineare privacy e social*/
   padding: 0.5em;
   list-style-type: none;
+    }
+
+
+  .footer-nav > li {
+      margin-top: 0;
+  }
+
+
+.footer-nav > li > a {
+    text-decoration: none;
 }
 
+/* social */
+
+ .social {
+  display: flex;
+  margin-left: 45em;
+    } 
+
+
+.social > a {
+  margin-top: 0;
+ }
 
 
 /** griglia centrale **/
