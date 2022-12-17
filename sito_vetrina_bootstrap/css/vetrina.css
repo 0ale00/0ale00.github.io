@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Galdeano&family=Secular+One&display=swap');
+
+:root {
+  --firt-color: #008080;
+  --black-font: black;
+  --white-font: white;
+}
+
+h1{
+  color: var(--firt-color);
+}
+
+
+h4, h5 {
+  font-family: 'Secular One', sans-serif;
+}
+
+p {
+  font-family: 'Galdeano', sans-serif;
+}
+
+/* nav */
+.navbar {
+  background-color: var(--firt-color);
+  background-image: linear-gradient(
+    to bottom, rgba(15, 14, 14, 0.032),rgba(0, 0, 0, 0.156));
+  border-radius: 10px;
+}
+
+.nav-item {
+  background-color: white;
+  border-radius: 10px;
+  margin-right: 0.5em;
+}
+
+/* setting news */
+.row {
+  justify-content: center;
+   }
+
+/* setting image */
+.media-image {
+  max-width: 30%;
+  float: left;
+  display: flex;
+  padding: 0.8em;
+}
+
+/* layout tiles */
+.col-6 {
+  border: 1px solid var(--firt-color);
+  border-radius: 10px;
+  margin: 0.5em; 
+  padding: 0.5em;
+ }
+
+/* layout central grid  */
+.imagegrid {
+  max-width: 30%;
+  float: left;
+  display: flex;
+  padding: 0.8em;
+}
+
+.col-4 {
+  font-size: smaller;
+}
+
+.containertext-center {
+  border: 1px solid var(--firt-color);
+  border-radius: 10px;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+/* second child */
+.col-4:nth-child(2) {
+  border-right: 1px solid var(--firt-color);
+  border-left: 1px solid var(--firt-color);
+}
+
+/** footer **/
+footer {
+  background-color: var(--firt-color);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(15, 14, 14, 0.032),
+    rgba(0, 0, 0, 0.156)
+  );
+  border-radius: 20px;
+  margin: 0.5em;
+}
+
+.footer-nav {
+  display: flex;
+  float: left; /* per far allineare privacy e social*/
+  padding: 0.5em;
+  /* margin-bottom: 1em; */
+  list-style-type: none;
+}
+
+.footer-nav > li > a {
+  text-decoration: none;
+  padding: 0.8em;
+  color: var(--white-font);
+}
+
+nav > p {
+  padding-bottom: 1em;
+  font-size: 10px;
+  margin-top: 2em;
+  margin-left: 2em;
+  color: var(--white-font);
+}
+
+/* social */
+
+.social {
+  display: flex;
+  margin-left: 70em;
+}
+
+/* banner */
+.containerimg {
+  display: inline-block;
+}
+
+.media-ban {
+  filter: drop-shadow(2px 10px 4px rgba(0, 0, 0, 0.242));
+  border-radius: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  height: 150px;
+  width: 100%; 
+  animation: ban1 3s ease 0s infinite normal forwards;
+}
+
+@keyframes ban1 {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    transform-origin: center center;
+  }
+
+  50% {
+    animation-timing-function: ease-in;
+    transform: scale(0.95);
+  }
+
+  
+  100% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+}
