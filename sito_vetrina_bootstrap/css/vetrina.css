@@ -4,7 +4,7 @@
   --firt-color: #008080;
   --black-font: black;
   --white-font: white;
-}
+  }
 
 h1{
   color: var(--firt-color);
@@ -33,10 +33,6 @@ p {
   margin-right: 0.5em;
 }
 
-/* setting news */
-.row {
-  justify-content: center;
-   }
 
 /* setting image */
 .media-image {
@@ -50,7 +46,9 @@ p {
 .col-6 {
   margin: 0.5em; 
   padding: 0.5em;
- }
+  width: calc(50% - 20px);
+    }
+
 
 /* layout central grid  */
 .imagegrid {
@@ -114,6 +112,7 @@ nav > p {
   display: flex;
   margin-left: 70em;
 }
+
 
 /* banner */
 .containerimg {
