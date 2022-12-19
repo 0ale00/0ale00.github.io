@@ -48,8 +48,6 @@ p {
 
 /* layout tiles */
 .col-6 {
-  border: 1px solid var(--firt-color);
-  border-radius: 10px;
   margin: 0.5em; 
   padding: 0.5em;
  }
@@ -67,17 +65,15 @@ p {
 }
 
 .containertext-center {
-  border: 1px solid var(--firt-color);
-  border-radius: 10px;
   margin: 0.5em;
   padding: 0.5em;
 }
 
 /* second child */
-.col-4:nth-child(2) {
+/* .col-4:nth-child(2) {
   border-right: 1px solid var(--firt-color);
   border-left: 1px solid var(--firt-color);
-}
+} */
 
 /** footer **/
 footer {
@@ -95,7 +91,6 @@ footer {
   display: flex;
   float: left; /* per far allineare privacy e social*/
   padding: 0.5em;
-  /* margin-bottom: 1em; */
   list-style-type: none;
 }
 
