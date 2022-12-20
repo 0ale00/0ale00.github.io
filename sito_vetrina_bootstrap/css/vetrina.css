@@ -6,6 +6,7 @@
   --white-font: white;
   }
 
+
 h1{
   color: var(--firt-color);
 }
@@ -44,9 +45,10 @@ p {
 
 /* layout tiles */
 .col-6 {
-  margin: 0.5em; 
+  /* margin: 0.5em;  */
   padding: 0.5em;
   width: calc(50% - 20px);
+  /* justify-content: flex-start; */
     }
 
 
@@ -148,4 +150,14 @@ nav > p {
     animation-timing-function: ease-out;
     transform: scale(1);
   }
+}
+
+/* sidebar */
+
+.justify-content-end {
+  justify-content: flex-end;
+  }
+
+.justify-content-start{
+  justify-content: flex-start;
 }
