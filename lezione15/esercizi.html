@@ -25,33 +25,32 @@
       var media = (my1Num + my2Num + my3Num + my4Num + my5Num) / 5;
       console.log("Media: " + media);
 
-      var annoCorrente = 2022;
-      var annoNascita = 1989;
+
+
+
+      var annoCorrente = 2022; //TODO qui si può prendere dal calendario
+      var annoNascita = Number(window.prompt("In che anno sei nato?", ""));
 
       var anni = annoCorrente - annoNascita;
-      console.log("anni: " + anni);
+      console.log("Anni:" + anni);
       var cento = 100 - anni;
-      console.log("Quanti anni mancano per arriva a 100 anni? " + cento);
-
-      var annoOggi = 2022;
-      var annoDiNascita = Number(window.prompt("In che anno sei nato?", " "));
-
-      var anni = annoCorrente - annoNascita;
-      console.log("anni: " + anni);
-      var cento = 100 - anni;
-      console.log("Quanti anni mancano per arriva a 100 anni? " + cento);
+      if (cento <= 0) {
+        console.log("Sei ULTRACENTENARIO complimenti!");
+      } else {
+        console.log("Per arrivare a 100 anni ti mancano " + cento + " anni.");
+      }
 
       var numero = "";
-        var tabellina = prompt("Quale tabellina vuoi stampare?");
-        for (var i = 1; i < 11; i++) {
-            numero += i * tabellina + " ";
-        }
-        //5x1 =
-        //5x2 =
-        console.log("tabellina " + numero)
+      var tabellina = prompt("Quale tabellina vuoi stampare?");
+      for (var i = 1; i < 11; i++) {
+        numero += i * tabellina + " ";
+      }
+      //5x1 =
+      //5x2 =
+      console.log("tabellina " + numero);
 
-        //Esercizio 4
-        /*
+      //Esercizio 4
+      /*
         Che giorno è oggi?
          Scrivi un programma che dato un numero intero compreso tra 1 a 7
         visualizzi il corrispondente giorno della settimana. Sapendo che:
@@ -71,8 +70,7 @@
         Scrivere una versione che anziché giorni della settimana, visualizzi i nomi dei mesi.
         */
 
-
-        const giorno = prompt("inserisci un numero del giorno della settimana");
+      const giorno = prompt("Inserisci un numero del giorno della settimana");
       switch (giorno) {
         case "1":
           console.log("Lunedì");
@@ -90,18 +88,16 @@
           console.log("venerdì");
           break;
         case "6":
-          console.log("sabsto");
+          console.log("sabato");
           break;
         case "7":
           console.log("domenica");
           break;
         default:
-          console.log("Giorno della settimana non valido")
+          console.log("Giorno della settimana non valido");
       }
 
-
-
-      const mese = prompt("inserisci un numero del mese");
+      const mese = prompt("Inserisci un numero del mese");
       switch (mese) {
         case "1":
           console.log("Gennaio");
@@ -124,24 +120,24 @@
         case "7":
           console.log("Luglio");
           break;
-          case "8":
+        case "8":
           console.log("Agosto");
           break;
-          case "9":
+        case "9":
           console.log("Settembre");
           break;
-          case "10":
+        case "10":
           console.log("Ottobre");
           break;
-          case "11":
+        case "11":
           console.log("Novembre");
           break;
-          case "12":
+        case "12":
           console.log("Dicembre");
           break;
 
         default:
-          console.log("Mese non valido")
+          console.log("Mese non valido");
       }
     </script>
   </body>
