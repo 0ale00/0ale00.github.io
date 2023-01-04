@@ -1,90 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
     <title>Data e ora</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        function formatDate(date) {
-            var d = new Date(date),
-                month = '' + (d.getMonth() + 1),
-                day = '' + d.getDate(),
-                year = d.getFullYear();
+      function formatDate(date) {
+        var d = new Date(date),
+          month = "" + (d.getMonth() + 1),
+          day = "" + d.getDate(),
+          year = d.getFullYear();
 
-            if (month.length < 2)
-                month = '0' + month;
-            if (day.length < 2)
-                day = '0' + day;
+        if (month.length < 2) month = "0" + month;
+        if (day.length < 2) day = "0" + day;
 
-            return [day, month, year].join('-');
+        return [day, month, year].join("-");
+      }
+
+      function quantoMancaACapodanno(date) {
+        //TODO DA IMPLEMENTARE
+        var d = new Date(date),
+          day = "" + d.getDate(),
+          ora = "" + d.getHours(),
+          minuti = "" + d.getMinutes(),
+          secondi = d.getSeconds();
+
+        var diffDay = 365 - day;
+        var diffOre = 23 - ora;
+        var diffMin = 60 - minuti;
+        var diffSec = 60 - secondi;
+        //console.log ("Mancano "+diffOre + ":"+diffMin + ":"+diffSec);
+        return diffDay + "g " + diffOre + ":" + diffMin + ":" + diffSec;
+      }
+
+      function cheOreSono(date) {
+        var d = new Date(date),
+          ora = "" + d.getHours(),
+          minuti = "" + d.getMinutes(),
+          secondi = d.getSeconds();
+
+        ora = "" + ora;
+        minuti = "" + minuti;
+        secondi = "" + secondi;
+
+        if (ora.length < 2) {
+          ora = "0" + ora;
+        }
+        if (minuti.length < 2) {
+          minuti = "0" + minuti;
+        }
+        if (secondi.length < 2) {
+          secondi = "0" + secondi;
         }
 
-        function quantoMancaACapodanno(date) {
+        return [ora, minuti, secondi].join(":");
+      }
 
-            //TODO DA IMPLEMENTARE
-            var d = new Date(date),
-                month = '' + (d.getMonth() + 1),
-                day = '' + d.getDate(),
-                year = d.getFullYear();
+      function quantoMancaMezzanotte(date) {
+        var d = new Date(date),
+          ora = "" + d.getHours(),
+          minuti = "" + d.getMinutes(),
+          secondi = d.getSeconds();
 
-            if (month.length < 2)
-                month = '0' + month;
-            if (day.length < 2)
-                day = '0' + day;
+        var diffOre = 23 - ora;
+        var diffMin = 60 - minuti;
+        var diffSec = 60 - secondi;
+        //console.log ("Mancano "+diffOre + ":"+diffMin + ":"+diffSec);
+        return diffOre + ":" + diffMin + ":" + diffSec;
+      }
 
-            //  22-12-2022  11-01-2022  01-02-2023
-            return [day, month, year].join('-');
-        }
+      const todayOk = new Date();
+      console.log(todayOk);
+      console.log("Oggi è " + formatDate(todayOk));
 
-        function cheOreSono(date) {
-            var d = new Date(date),
-                ora = '' + (d.getHours()),
-                minuti = '' + d.getMinutes(),
-                secondi = d.getSeconds();
+      //todo che ore sono
+      console.log("Sono le " + cheOreSono(todayOk));
 
-                ora = ""+ora;
-                minuti = ""+minuti;
-                secondi = ""+secondi;
-            
-            if (ora.length < 2) { ora = '0' + ora; }
-            if (minuti.length < 2) { minuti = '0' + minuti; }
-            if (secondi.length < 2) { secondi = '0' + secondi; }
+      //calcolare quante ore mancano a mezzanotte
+      console.log(
+        "Quanto manca a mezzanotte in ora minuti secondi? " +
+          quantoMancaMezzanotte(todayOk)
+      );
 
-            return [ora, minuti, secondi].join(':');
-        }
-
-        function quantoMancaMezzanotte(date) {
-            var d = new Date(date),
-                ora = '' + (d.getHours()),
-                minuti = '' + d.getMinutes(),
-                secondi = d.getSeconds();
-
-                var diffOre= 23 - ora;
-                var diffMin= 60 - minuti;
-                var diffSec = 60 - secondi;
-                //console.log ("Mancano "+diffOre + ":"+diffMin + ":"+diffSec);
-            return diffOre + ":"+diffMin + ":"+diffSec;
-        }
-
-        const todayOk = new Date();
-        console.log(todayOk);
-        console.log('Oggi è ' + formatDate(todayOk));
-        //todo che ore sono
-        console.log('Sono le ' + cheOreSono(todayOk));
-
-        //calcolare quante ore mancano a mezzanotte
-        console.log('Quanto manca a mezzanotte in ora minuti secondi? ' + quantoMancaMezzanotte(todayOk));
-
-        //quanti giorni mancano a capodanno
-        console.log('Quanto manca a capodanno in giorni ore minuti? ' + quantoMancaACapodanno(todayOk));
-
+      //quanti giorni mancano a capodanno
+      console.log(
+        "Quanto manca a capodanno in giorni ore minuti? " +
+          quantoMancaACapodanno(todayOk)
+      );
     </script>
-
-</body>
-
+  </body>
 </html>
