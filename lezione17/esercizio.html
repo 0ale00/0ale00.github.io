@@ -12,25 +12,29 @@
       var today = new Date();
       var yesterday = new Date(new Date().setDate(new Date().getDate() - 1));
       console.log(yesterday);
-      
-      var dayNames=new Array("Domenica","Lunedì","Martedì","Mercoledì","Giovedì","Venerdì","Sabato");
+
+      var dayNames = new Array("Domenica","Lunedì", "Martedì", "Mercoledì","Giovedì","Venerdì","Sabato");
       var weekday = yesterday.getDay();
       console.log(dayNames[weekday]);
 
-      
-       
       //DA IMPLEMENTARE
       class YesterDay extends Date {
         getYesterday() {
           //che giorno della settimana era?
-        
+          const dayNames1 = [ "Domenica","Lunedì", "Martedì", "Mercoledì","Giovedì","Venerdì","Sabato"];
+          return `${this.getDate()}-${dayNames1[this.getDay()]}`;
         }
       }
 
+      console.log(YesterDay.mostraGiorno);
+
+     
+
       //SUGGERIMENTO
-    //   var today = new Date();
-    //   var yesterday = new Date(new Date().setDate(new Date().getDate() - 1));
-    //   console.log(yesterday);
-    // </script>
+      //   var today = new Date();
+      //   var yesterday = new Date(new Date().setDate(new Date().getDate() - 1));
+      //   console.log(yesterday);
+      //
+    </script>
   </body>
 </html>
