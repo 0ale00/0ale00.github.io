@@ -16,5 +16,19 @@
     
         </ol>
         <p id="toDoNotes">Make sure all these are game on TV!</p>
+        <script>
+            function countListItems () {
+                const olElement = document.getElementById("Do to list");
+                let count = 0;
+                for (let i= 0; i<olElement.childNodes.length; i++ ){
+                    if (olElement.childNodes[i].nodeType===1){
+                        count++;
+                    }
+                }
+            }
+            alert("The ordered list contains " + count + "items.")
+        </script>
+
+
 </body>
 </html>
