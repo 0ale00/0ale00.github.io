@@ -61,6 +61,6 @@ console.log(Math.max(-1, -3, -2));
 const array1 = [9, 3, 12,81, 7, 44, 29];
 
 console.log("Minimo valore di un array "+ Math.min(...array1));
-console.log("Minimo valore di un array "+ Math.max(...array1));
+console.log("Massimo valore di un array "+ Math.max(...array1));
 // expected output: 1
   
