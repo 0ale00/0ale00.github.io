@@ -2,58 +2,40 @@ function checkFreeRoom() {
     return Math.floor(Math.random() * 6) + 1;
   }
   
-  console.log("**** INIZIO PRENOTAZIONE STANZA ****");
+  function checkRestaurant() {
+    return Math.floor(Math.random() * 6) + 1;
+  }
   
-  /*
-  myPromise
-    .then((value) => `${value} and bar`)
-    .then((value) => `${value} and bar again`)
-    .then((value) => `${value} and again`)
-    .then((value) => `${value} and again`)
-    .then((value) => {
-      console.log(value);
-    })
-    .catch((err) => {
-      console.error(err);
-    });
-  
-  */
-  
+  console.log("**** INIZIO PRENOTAZIONE ****");
   const promiseReservation = new Promise((resolve, reject) => {
     let result = checkFreeRoom();
-    console.log("Result " + result);
-   
-      console.log("ok");
-      resolve("OK");
-  
-  });
-  
-  promiseReservation.then((successMessage) => {
-    console.log(`Bene: ${successMessage}`);
-  });
-  /*
-  promiseReservation.catch((errorMessage) => {
-    console.error(`Peccato: ${errorMessage}`);
-  });
-  
-  promiseReservation.finally((info) => console.log("Finito tutto"));*/
-  console.log("**** FINITO PRENOTAZIONE STANZA ****");
-  
-  
-  /*
-  new Promise(tetheredGetNumber)
-    .then(determineParity, troubleWithGetNumber)
-    .then(promiseGetWord)
-    .then((info) => {
-      console.log(`Ho ottenuto: ${info.value}, ${info.wordEvenOdd}`);
-      return info;
-    })
-    .catch((reason) => {
-      if (reason.cause) {
-        console.error("Had previously handled error");
+    // console.log("Result: " + result);
+    if (result > 2) {
+      console.log("Stanza libera OK!");
+      resolve("stanza libera!");
+    } else {
+      console.log("Nessuna stanza libera KO!");
+      reject("Stanza occupata");
+    }
+  })
+    .then((messaggio) => {
+      console.log(`Bene c'è una ${messaggio}`);
+      console.log("Controllo ristorante...");
+      let result = checkRestaurant();
+      if (result > 2) {
+        console.log("Ristorante libero OK!");
+        return "OK";
       } else {
-        console.error(`Trouble with promiseGetWord(): ${reason}`);
+        console.log("Ristorante occupato KO!");
+        throw new Error("Ristorante occupato");
       }
     })
-    .finally((info) => console.log("Finito tutto"));
-  */
+    .then((successMessage) => {
+      console.log(`Bene: ${successMessage}`);
+    })
+    .catch((errorMessage) => {
+      console.log(`Peccato: ${errorMessage}`);
+    })
+    .finally(() => {
+      console.log("**** FINITO PRENOTAZIONE ****");
+    });
