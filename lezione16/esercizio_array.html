@@ -17,7 +17,7 @@
         var myColor = ["red", "yellow", "green", "grey", "blue"];
         console.log("START: " + myColor)
 
-        var tolto = myColor.splice(2, 1);
+        var tolto = myColor.splice(2, 1); // (2,1 oppure 0) il primo numero è la posizione nell'array, il secondo num 1 se si sostituisce 0 fa upload e inserisce il nuovo elemento
         console.log("Tolgo " + tolto);
 
         if (myColor.indexOf(tolto) < 0) {
