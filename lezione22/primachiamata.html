@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La prima chiamata</title>
+  </head>
+  <h1>L'immagine del mio cane</h1>
+  <img src="" id="dogphoto" />
+  <body>
+    <script>
+      let callMyApi = "https://dog.ceo/api/breeds/image/random";
+      fetch(callMyApi)
+        .then(function (response) {
+          console.log(response);
+          console.log("Risposta status: " + response.status);
+          response.json().then(function (json) {
+            console.log(json);
+            //const myDog = JSON.parse(json);
+            let url = json.message;
+            console.log("Indirizzo della foto: " + url);
+            let targetImg = document.getElementById("dogphoto");
+            targetImg.setAttribute("src", url);
+          });
+        })
+        .catch((errorMessage) => {
+          console.log(`Non raggiungibile: ${errorMessage}`);
+        });
+    </script>
+  </body>
+</html>
