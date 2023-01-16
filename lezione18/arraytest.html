@@ -1,113 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Array</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        var daysOfWeek = new Array("Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato");
-        console.log(daysOfWeek[3]);
-        console.log("Contiene " + daysOfWeek.length + " elementi");
-       
-        console.log ("***** Ora uso ciclo for ******");
-        for (let singleDay = 0; singleDay < daysOfWeek.length; singleDay++) {
-            console.log("Posizione " + singleDay + " Nome del giorno " + daysOfWeek[singleDay]);
-            if (daysOfWeek[singleDay] == 'Lunedì') {
-                console.log("Il primo giorno della settimana");
-                //chiama la funzione pagaBollette...
-                //invia mail di memorandum
-            }
+      var daysOfWeek = new Array(
+        "Domenica",
+        "Lunedì",
+        "Martedì",
+        "Mercoledì",
+        "Giovedì",
+        "Venerdì",
+        "Sabato"
+      );
+      console.log(daysOfWeek[3]);
+      console.log("Contiene " + daysOfWeek.length + " elementi");
+
+      console.log("***** Ora uso ciclo for ******");
+      for (let singleDay = 0; singleDay < daysOfWeek.length; singleDay++) {
+        console.log(
+          "Posizione " + singleDay + " Nome del giorno " + daysOfWeek[singleDay]
+        );
+        if (daysOfWeek[singleDay] == "Lunedì") {
+          console.log("Il primo giorno della settimana");
+          //chiama la funzione pagaBollette...
+          //invia mail di memorandum
         }
+      }
 
-        //altro modo di dichiarare un array
-        const fruits = [];
-        fruits.push("banana", "apple", "peach");
-        console.log("Num elementi " + fruits.length);
+      //altro modo di dichiarare un array
+      const fruits = [];
+      fruits.push("banana", "apple", "peach");
+      console.log("Num elementi " + fruits.length);
 
-        const clothing = ['shoes', 'shirts', 'socks', 'sweaters'];
-        console.log(clothing.length);
+      const clothing = ["shoes", "shirts", "socks", "sweaters"];
+      console.log(clothing.length);
 
-        const numbers = [1, 2, 3, 4, 5];
-        const length = numbers.length;
-        for (let i = 0; i < length; i++) {
-            numbers[i] *= 2;
+      const numbers = [1, 2, 3, 4, 5];
+      const length = numbers.length;
+      for (let i = 0; i < length; i++) {
+        numbers[i] *= 2;
+      }
+
+      const months = ["March", "Jan", "Feb", "Dec"];
+      months.sort();
+      console.log(months);
+      // expected output: Array ["Dec", "Feb", "Jan", "March"]
+
+      const array1 = [1, 30, 4, 21, 100000];
+      array1.sort();
+      console.log(array1);
+      // expected output: Array [1, 100000, 21, 30, 4]
+
+      //Array ordinato su due valori
+      const items = [
+        { name: "Edward", value: 21 },
+        { name: "Sharpe", value: 37 },
+        { name: "And", value: 45 },
+        { name: "The", value: -12 },
+        { name: "Magnetic", value: 13 },
+        { name: "Zeros", value: 37 },
+      ];
+
+      // sort by value
+      items.sort((a, b) => a.value - b.value);
+
+      // sort by name
+      items.sort((a, b) => {
+        const nameA = a.name.toUpperCase(); // ignore upper and lowercase
+        const nameB = b.name.toUpperCase(); // ignore upper and lowercase
+        if (nameA < nameB) {
+          return -1;
         }
+        if (nameA > nameB) {
+          return 1;
+        }
+        // names must be equal
+        return 0;
+      });
 
-        const months = ['March', 'Jan', 'Feb', 'Dec'];
-        months.sort();
-        console.log(months);
-        // expected output: Array ["Dec", "Feb", "Jan", "March"]
+      console.log(items);
 
-        const array1 = [1, 30, 4, 21, 100000];
-        array1.sort();
-        console.log(array1);
-        // expected output: Array [1, 100000, 21, 30, 4]
+      //REVERSE
+      const arrayC = ["one", "two", "three"];
+      console.log("arrayC:", arrayC);
+      // expected output: "array1:" Array ["one", "two", "three"]
 
-        //Array ordinato su due valori
-        const items = [
-            { name: "Edward", value: 21 },
-            { name: "Sharpe", value: 37 },
-            { name: "And", value: 45 },
-            { name: "The", value: -12 },
-            { name: "Magnetic", value: 13 },
-            { name: "Zeros", value: 37 },
-        ];
+      const reversed = arrayC.reverse();
+      console.log("reversed:", reversed);
+      // expected output: "reversed:" Array ["three", "two", "one"]
 
-        // sort by value
-        items.sort((a, b) => a.value - b.value);
+      // Careful: reverse is destructive -- it changes the original array.
+      console.log("arrayC:", arrayC);
+      // expected output: "array1:" Array ["three", "two", "one"]
 
-        // sort by name
-        items.sort((a, b) => {
-            const nameA = a.name.toUpperCase(); // ignore upper and lowercase
-            const nameB = b.name.toUpperCase(); // ignore upper and lowercase
-            if (nameA < nameB) {
-                return -1;
-            }
-            if (nameA > nameB) {
-                return 1;
-            }
-            // names must be equal
-            return 0;
-        });
+      //ESEMPI for each per iterare gli array
+      const arrayA = ["a", "b", "c", "k"];
+      arrayA.forEach((myPart) => console.log(myPart));
 
-        console.log(items);
+      const array2 = ["a", "b", "c", "k"];
+      array2.forEach((myPart) => console.log(myPart));
 
-        //REVERSE
-        const arrayC = ['one', 'two', 'three'];
-        console.log('arrayC:', arrayC);
-        // expected output: "array1:" Array ["one", "two", "three"]
+      array2.forEach((valore, index) => {
+        console.log("indice " + index + " valore " + valore);
+        if (index == 3) {
+          console.log("K è una vitamina");
+        }
+        if (valore == "b") {
+          console.log("Anche B è una vitamina");
+        }
+      });
 
-        const reversed = arrayC.reverse();
-        console.log('reversed:', reversed);
-        // expected output: "reversed:" Array ["three", "two", "one"]
+      //array.prototype.concat
+      const array3 = ["a", "b", "c"];
+      const array4 = ["d", "e", "f"];
+      const array5 = array1.concat(array2);
 
-        // Careful: reverse is destructive -- it changes the original array.
-        console.log('arrayC:', arrayC);
-        // expected output: "array1:" Array ["three", "two", "one"]
+      console.log(array3);
 
-        //ESEMPI for each per iterare gli array
-        const arrayA = ['a', 'b', 'c', 'k'];
-        arrayA.forEach(myPart => console.log(myPart));
+      //array.prototype.join
+      const elements = ["Fire", "Air", "Water"];
 
-        const array2 = ['a', 'b', 'c', 'k'];
-        array2.forEach(myPart => console.log(myPart));
+      console.log(elements.join());
+      // Expected output: "Fire,Air,Water"
 
-        array2.forEach((valore, index) => {
-            console.log("indice " + index + " valore " + valore);
-            if (index == 3) {
-                console.log("K è una vitamina");
-            }
-            if (valore == 'b') {
-                console.log("Anche B è una vitamina");
-            }
-        })
+      console.log(elements.join(""));
+      // Expected output: "FireAirWater"
+
+      console.log(elements.join("-"));
+      // Expected output: "Fire-Air-Water"
+
+      //array.prototype.reduce
+      const array6 = [1, 2, 3, 4];
+
+      // 0 + 1 + 2 + 3 + 4
+      const initialValue = 0;
+      const sumWithInitial = array1.reduce(
+        (accumulator, currentValue) => accumulator + currentValue,
+        initialValue
+      );
+
+      console.log(sumWithInitial);
+      // Expected output: 10
+
+ //array.prototype.slice
+      const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+console.log(animals.slice(2));
+// Expected output: Array ["camel", "duck", "elephant"]
+
+console.log(animals.slice(2, 4));
+// Expected output: Array ["camel", "duck"]
+console.log(animals.slice(-2));
+// Expected output: Array ["duck", "elephant"]
+
+
+//array.prototype.splice
+const months1 = ['Jan', 'March', 'April', 'June'];
+months1.splice(1, 0, 'Feb');
+// Inserts at index 1
+console.log(months1);
+// Expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+months1.splice(4, 1, 'May');
+// Replaces 1 element at index 4
+console.log(months1);
+// Expected output: Array ["Jan", "Feb", "March", "April", "May"]
+
 
     </script>
-</body>
-
+  </body>
 </html>
