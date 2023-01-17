@@ -18,8 +18,8 @@ class Person {
  * @returns
  */
 function greeter(person: Person) {
-  console.log("dati ricevuti:" + person.firstName + " " + person.lastName);
+  console.log("dati ricevuti:" + person.firstName + " " + person.lastName + "" + person.city );
   const divInfo = document.getElementById("peopleData");
   divInfo.innerHTML =
-    "<p> <b>" + person.firstName + " " + person.lastName + "</b></p>";
+    "<p> <b>" + person.firstName + " " + person.lastName + "</b>"+  " " + person.city + "</p>";
 }
