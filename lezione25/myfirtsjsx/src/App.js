@@ -1,11 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
-import HelloWorld from './components/HelloWorld';
+import HelloWorld from './components/HelloWord';
+import Orologio from './components/Orologio';
 
-function App() {
+
+
+function App() {  
   return (
     <div className="App">
-      <HelloWorld></HelloWorld>
+      <HelloWorld name="mondo"></HelloWorld>
+      <Orologio></Orologio>
     </div>
   );
 }
